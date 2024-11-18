@@ -1,0 +1,36 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20px;
+    color: #333333; /* Texto cinza escuro */
+
+}
+
+header {
+    text-align: center;
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: #0d47a1;
+    color: #ffff;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.botaovoltar {
+    position: absolute;
+    top: 140px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: rgb(2, 2, 2);
+    background-color: #e0e0e0; /* Cinza médio */
+    transition: box-shadow 0.3s ease;
+}
+
+.botaovoltar:hover {
+    background-color: #adadad; /* Cinza mais escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Aumenta o tamanho do elemento */
+    transition: transform 0.3s ease; /* Animação suave */
+}

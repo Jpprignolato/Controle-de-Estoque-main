@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroFornecedores</title>
+    <link rel="stylesheet" href="../css/formularioFornecedor.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro de Fornecedores</h1>
+    </header>
+    <div class="voltar">
+        <button class="botaovoltar" onclick="window.location.href='fornecedores.html'">Voltar</button>
+    </div>
+    <form class="formulariofornecedor" id="formularioFornecedor">
+
+        <label for="cnpj">CNPJ ou CPF do Fornecedor:</label>
+        <input type="text" id="cpfCnpj" name="cnpj" placeholder="CNPJ" required>
+
+        <label for="nomeFornecedor">Nome do Fornecedor: </label>
+        <input type="text" id="nomeFornecedor" name="nomeFornecedor" placeholder="Nome do Fornecedor" required>
+
+        <label for="telefone">Telefone de Contato: </label>
+        <input type="tel" id="telefone" name="telefone" placeholder=" (XX)X-XXXX-XXXX">
+        <button type="submit" id="cadastrarFornecedor">Cadastrar Fornecedor</button>
+    </form>
+
+    <script src="../js/formularioFornecedores.js"></script>
+</body>
+
+</html>

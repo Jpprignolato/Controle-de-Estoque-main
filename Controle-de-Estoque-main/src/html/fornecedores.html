@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fornecedores</title>
+    <link rel="stylesheet" href="../css/cadastrofornecedor.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fornecedores</h1>
+    </header>
+    <div class="container-wrapper">
+      <div class="containerdepesquisar">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-bar"
+          placeholder="Digite o nome do fornecedor"
+        />
+        <button class="search-button" onclick="pesquisarFornecedor()">Pesquisar</button>
+      </div>
+    </div>
+    <div class="addremove">
+      <button
+        class="botaoadicionar"
+        onclick="window.location.href='formularioFornecedor.html'"
+      >
+        Adicionar Fornecedor
+      </button>
+    </div>
+    <div class="voltar">
+      <button class="botaovoltar" onclick="window.location.href='index.html'">
+        Voltar
+      </button>
+    </div>
+    <h3>Lista de Fornecedores</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>CNPJ/CPF</th>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaFornecedores">
+
+                            <!-- Linhas serão adicionada aqui-->
+
+      </tbody>
+    </table>
+    <script src="../js/fornecedores.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroProdutos</title>
+    <link rel="stylesheet" href="../css/formularioProdutos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro de Produtos</h1>
+    </header>
+    <div class="voltar">
+        <button class="botaovoltar" onclick="window.location.href='produtos.html'">Voltar</button>
+    </div>
+    <form class="formularioProduto">
+
+        <label for="codigoProduto">Código Produto:</label>
+        <input type="text" id="codigoP" name="codigo" placeholder="Codigo Produto" required>
+
+        <label for="categoriaProduto" class="label-categoria">Categoria: </label>
+        <select id="categoriaProduto" name="Categoria" required>
+            <option value="" disabled selected>Selecione uma Categoria</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="vestuario">Vestuário</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="livros">Livros</option>
+        </select>
+
+        <label for="nomeProduto">Nome do Produto: </label>
+        <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Nome do Produto">
+
+        <label for="preco">Preço: </label>
+        <input type="number" id="precoProduto" name="precoProduto" placeholder="Preço" required>
+
+        <label for="quantidade">Quantidade: </label>
+        <input type="number" id="quantidade" name="quantidade" min="1" step="1" placeholder="Qunatidade" required>
+
+        <label for="dataEntrada">Data de Entrada</label>
+        <input type="datetime-local" id="data" name="dataEntrada" placeholder="Data de Entrada" required>
+
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+</body>
+
+</html>
