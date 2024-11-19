@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fornecedores</title>
     <link rel="stylesheet" href="../css/produtos.css">
 </head>
+
 <body>
     <header>
         <h1>Produtos</h1>
     </header>
     <div class="container-wrapper">
         <div class="containerdepesquisar">
-            <input type="text" class="search-bar" placeholder="Digite o nome do produto">
-            <button class="search-button">Pesquisar</button>
+            <input type="text" id="searchInput" class="search-bar" placeholder="Digite o nome do produto">
+            <button class="search-button" onclick="pesquisarProduto()">Pesquisar</button>
         </div>
     </div>
-    <div class = "addremove">
-        <button class = "botaoadicionar" onclick="window.location.href='formularioProduto.html'">Adicionar Produto</button>
+    <div class="addremove">
+        <button class="botaoadicionar" onclick="window.location.href='formularioProduto.html'">
+            Adicionar Produto
+        </button>
     </div>
-    <div class = "voltar">
+    <div class="voltar">
         <button class="botaovoltar" onclick="window.location.href='index.html'">Voltar</button>
     </div>
+    <h3>Lista de Produtos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Código Produto</th>
+                <th>Categoria</th>
+                <th>Nome do Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Data de Entrada</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaProdutos">
+
+            <!-- Linhas serão adicionada aqui-->
+
+        </tbody>
+    </table>
+    <script src="../js/produtos.js"></script>
 </body>
+
 </html>

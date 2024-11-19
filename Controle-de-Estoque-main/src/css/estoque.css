@@ -2,6 +2,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 20px;
     color: #333333; /* Texto cinza escuro */
+    margin: 0;
 }
 
 header {
@@ -10,90 +11,75 @@ header {
     border-radius: 10px;
     background-color: #0d47a1;
     color: #ffff;
-    padding: 5px;
-    margin-bottom: 80px;
+    padding: 10px;
+    margin-bottom: 40px;
 }
 
 .addremove {
-    position: absolute; /* Torna o posicionamento absoluto em relação ao elemento pai mais próximo posicionado */
-    top: 20%; /* Ajuste conforme necessário para alinhar verticalmente */
-    right: 20%; /* Ajuste para alinhar à direita */
-    display: flex; /* Para organizar os botões em linha */
-    gap: 30px; /* Espaçamento entre os botões */
-    padding-top: 50px;
+    position: relative; /* Evita problemas com posicionamento absoluto */
+    display: flex; /* Organiza os botões em linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 20px;
+    padding: 20px;
 }
 
 .botaoatualizar {
-    padding: 15px 30px; /* Aumenta o preenchimento interno do botão */
-    font-size: 18px; /* Aumenta o tamanho da fonte */
+    padding: 10px 20px;
+    font-size: 1rem;
     border: none;
-    background-color: #d2e00d; /* Cor de fundo */
-    color: white; /* Cor do texto */
+    background-color: #d2e00d;
+    color: white;
     cursor: pointer;
-    border-radius: 8px; /* Bordas arredondadas maiores */
-    transition: box-shadow 0.3s ease; width: auto; /* Ajusta automaticamente o tamanho à largura do conteúdo */
-}
-
-.botaoexcluir {
-    padding: 15px 30px; /* Aumenta o preenchimento interno do botão */
-    font-size: 18px; /* Aumenta o tamanho da fonte */
-    border: none;
-    background-color: #c51f1f; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    cursor: pointer;
-    border-radius: 8px; /* Bordas arredondadas maiores */
-    width: auto; /* Ajusta automaticamente o tamanho à largura do conteúdo */
+    border-radius: 8px;
     transition: box-shadow 0.3s ease;
+    width: auto;
 }
 
-.botaoatualizar:hover, .botaoexcluir:hover {
+.botaoatualizar:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1); /* Aumenta o tamanho do elemento */
-    transition: transform 0.3s ease; /* Animação suave */
-    
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .containerdepesquisar {
-    display: flex; /* Alinha os itens em linha */
-    gap: 10px; /* Espaçamento entre os elementos */
-    margin-top: 20px; /* Espaçamento superior */
-    margin-left: 10; /* Empurra para a direita */
-    padding-top: 40px;
+    display: flex;
+    flex-direction: column; /* Alinha em coluna por padrão */
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .search-bar {
-    width: 600px; /* Largura da barra de pesquisa */
-    padding: 10px 20px; /* Preenchimento interno */
-    font-size: 20px; /* Tamanho do texto */
-    border: 2px solid #ccc; /* Borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    outline: none; /* Remove o contorno ao focar */
-    transition: border-color 0.3s ease; /* Suaviza mudanças na borda */
-    margin-left: 10%;
+    width: 90%; /* Usa a maior parte da largura disponível */
+    max-width: 600px; /* Limita a largura máxima */
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
 .search-bar:focus {
-    border-color: #007BFF; /* Cor da borda ao focar */
+    border-color: #007BFF;
 }
 
 .search-button {
-    padding: 10px 20px; /* Preenchimento interno */
-    font-size: 16px; /* Tamanho do texto */
-    border: none; /* Remove a borda padrão */
-    background-color: #007BFF; /* Cor de fundo inicial */
-    color: white; /* Cor do texto */
-    cursor: pointer; /* Mostra o cursor "mãozinha" */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: box-shadow 0.3s ease; /* Transição suave para o efeito de sombra */
-    
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
 }
-
 
 .search-button:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1); /* Aumenta o tamanho do elemento */
-    transition: transform 0.3s ease; /* Animação suave */
-    
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .botaovoltar {
@@ -107,13 +93,95 @@ header {
     color: rgb(2, 2, 2);
     background-color: #e0e0e0; /* Cinza médio */
     transition: box-shadow 0.3s ease;
-    
+}
+.botaovoltar:hover {
+    background-color: #adadad;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
-.botaovoltar:hover {
-    background-color: #adadad; /* Cinza mais escuro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .addremove {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .containerdepesquisar {
+        padding: 10px;
+    }
+
+    .search-bar {
+        font-size: 16px;
+    }
+
+    .botaoatualizar, .search-button, .botaovoltar {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 0.8em;
+    }
+
+    .search-bar {
+        width: 100%; /* Ocupa toda a largura da tela */
+        font-size: 14px;
+    }
+
+    .addremove {
+        gap: 5px;
+    }
+
+    .botaoatualizar, .search-button, .botaovoltar {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    margin: 100px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.botao-remover {
+    background-color: #f44336; /* Cor vermelha para o botão */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 8px 16px; /* Tamanho do botão */
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondas */
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Transição suave para a cor */
+  }
+
+  .botaovoltar:hover {
+    background-color: #adadad;
+  }
+
+  .botao-remover:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     transform: scale(1.1); /* Aumenta o tamanho do elemento */
     transition: transform 0.3s ease; /* Animação suave */
-    
-}
+  }

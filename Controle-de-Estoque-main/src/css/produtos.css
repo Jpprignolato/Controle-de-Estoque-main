@@ -91,3 +91,41 @@ header {
     background-color: #adadad; /* Cinza mais escuro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+h3 {
+    text-align: center;
+    color: #333;
+    margin: 100px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.botao-remover {
+    background-color: #f44336; /* Cor vermelha para o botão */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 8px 16px; /* Tamanho do botão */
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondas */
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Transição suave para a cor */
+  }
+
+  .botaovoltar:hover {
+    background-color: #adadad;
+  }
+
+  .botao-remover:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1); /* Aumenta o tamanho do elemento */
+    transition: transform 0.3s ease; /* Animação suave */
+  }

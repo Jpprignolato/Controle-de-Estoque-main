@@ -17,10 +17,29 @@
         </div>
     <div class = "addremove">
         <button class="botaoatualizar">Atualizar Produto</button>
-        <button class="botaoexcluir">Excluir Produto</button>
     </div>
     <div class = "voltar">
         <button class="botaovoltar on" onclick="window.location.href='index.html'">Voltar</button>
     </div>
+    <h3>Lista de itens</h3>
+    <table>
+      <thead>
+        <tr>
+            <th>Código Produto</th>
+            <th>Categoria</th>
+            <th>Nome do Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Data de Entrada</th>
+            <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaProdutos">
+  
+        <!-- Linhas serão adicionada aqui-->
+  
+      </tbody>
+    </table>
+    <script src="../js/estoque.js"></script>
 </body>
 </html>
